@@ -30,7 +30,7 @@ function Fn() { this.a = 1; }
 Fn.prototype.b = true;
 var fn = new Fn();
 Object.defineProperty(fn, 'c', { value: 'C' });
-enumAllProps(fn); // => ['a', 'b', 'c']
+enumAllProps(fn); // => ['a', 'b']
 ```
 
 For Web browsers:

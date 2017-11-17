@@ -66,7 +66,7 @@ describe('fav.prop.enumAllProps', function() {
     expect(enumAllProps(s)).to.deep.equal([]);
   });
 
-  it('Should return an array of index strings when the argument is a string',
+  it('Should return an array of index strings when the argument is a array',
   function() {
     expect(enumAllProps([])).to.deep.equal([]);
     expect(enumAllProps([1, 2, 3])).to.deep.equal(['0', '1', '2']);
