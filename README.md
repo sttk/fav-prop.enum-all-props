@@ -50,7 +50,7 @@ enumAllProps({ a: 1, b: true, c: 'C' }); // => ['a', 'b', 'c' ]
 
 List own and inherited enumerable properties of the given object.
 
-This function returns properties enumerated with "for-in".
+This function returns properties enumerated with "for-in", but returns an empty array if *obj* is nullish or is not an object.
 
 #### Parameter:
 
