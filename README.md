@@ -54,9 +54,9 @@ This function returns properties enumerated with "for-in", but returns an empty 
 
 #### Parameter:
 
-| Parameter |  Type  | Description                           |
-|-----------|:------:|---------------------------------------|
-| *obj*     | object | The object to be list its properties. |
+| Parameter |  Type  | Description                             |
+|-----------|:------:|-----------------------------------------|
+| *obj*     | object | The object to be listed its properties. |
 
 #### Return:
 
