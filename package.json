@@ -1,6 +1,6 @@
 {
   "name": "@fav/prop.enum-all-props",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Lists enumerable own and inherited property content objects of an object.",
   "main": "index.js",
   "files": [
