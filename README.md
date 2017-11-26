@@ -1,6 +1,6 @@
 # [@fav/prop.enum-all-props][repo-url] [![NPM][npm-img]][npm-url] [![MIT License][mit-img]][mit-url] [![Build Status][travis-img]][travis-url] [![Build Status][appveyor-img]][appveyor-url] [![Coverage status][coverage-img]][coverage-url]
 
-Lists enumerable own and inherited properties of an object.
+Lists enumerable own and inherited property content objects of an object.
 
 > "fav" is an abbreviation of "favorite" and also the acronym of "for all versions".
 > This package is intended to support all Node.js versions and many browsers as possible.
@@ -24,13 +24,14 @@ For Node.js:
 
 ```js
 var enumAllProps = require('@fav/prop.enum-all-props');
-enumAllProps({ a: 1, b: true, c: 'C' }); // => ['a', 'b', 'c' ]
+enumAllProps({ a: 1, b: true, c: 'C' });
+// => [{ key: 'a', value: 1 }, { key: 'b', value: true }, { key: 'c', value: 'C" }]
 
 function Fn() { this.a = 1; }
 Fn.prototype.b = true;
 var fn = new Fn();
 Object.defineProperty(fn, 'c', { value: 'C' });
-enumAllProps(fn); // => ['a', 'b']
+enumAllProps(fn); // => [{ key: 'a', value: 1 }, { key: 'b', value: true }]
 ```
 
 For Web browsers:
@@ -39,7 +40,8 @@ For Web browsers:
 <script src="fav.prop.enum-all-props.min.js"></script>
 <script>
 var enumAllProps = fav.prop.enumAllProps;
-enumAllProps({ a: 1, b: true, c: 'C' }); // => ['a', 'b', 'c' ]
+enumAllProps({ a: 1, b: true, c: 'C' });
+// => [{ key: 'a', value: 1 }, { key: 'b', value: true }, { key: 'c', value: 'C" }]
 </script>
 ```
 
@@ -48,7 +50,9 @@ enumAllProps({ a: 1, b: true, c: 'C' }); // => ['a', 'b', 'c' ]
 
 ### <u>enumAllProps(obj) : Array</u>
 
-List own and inherited enumerable properties of the given object.
+Lists enumerable own and inherited property content objects of the given object.
+
+A property content object is a plain object having `key` and `value` properties.
 
 This function returns properties enumerated with "for-in", but returns an empty array if *obj* is nullish.
 
@@ -60,7 +64,7 @@ This function returns properties enumerated with "for-in", but returns an empty 
 
 #### Return:
 
-An array of property names.
+An array of property content objects.
 
 **Type:** Array
 
@@ -69,11 +73,11 @@ An array of property names.
 
 ### Node.js (4〜8)
 
-| Platform  |   4    |   5    |   6    |   7    |   8    |
-|:---------:|:------:|:------:|:------:|:------:|:------:|
-| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
-| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
-| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Platform  |   4    |   5    |   6    |   7    |   8    |   9    |
+|:---------:|:------:|:------:|:------:|:------:|:------:|:------:|
+| macOS     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Windows10 |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
+| Linux     |&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|&#x25ef;|
 
 ### io.js (1〜3)
 
