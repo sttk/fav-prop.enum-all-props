@@ -85,7 +85,7 @@ An array of property keys and symbols.
 
 ## Checked                                                                      
 
-### Node.js (4〜8)
+### Node.js (4〜9)
 
 | Platform  |   4    |   5    |   6    |   7    |   8    |   9    |
 |:---------:|:------:|:------:|:------:|:------:|:------:|:------:|
